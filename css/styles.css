@@ -1,0 +1,1395 @@
+:root {
+  --primary-text-color: #fbfbfb;
+  --primary-bg-color: #0e1823;
+  --default-btn-color: rgba(27, 65, 75, 0.5);
+  --accent-color: #1b414b;
+  --default-transition-properties: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  color: var(--primary-text-color);
+  background-color: var(--primary-bg-color);
+  background-image: url("../img/hero/hero-bg-mobile@1x.jpg");
+  background-position: center top;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 767px) {
+  .section {
+    padding: 40px 0;
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+  screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px) {
+  body {
+    background-image: url("../img/hero/hero-bg-mobile@2x.jpg");
+  }
+}
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url("../img/hero/hero-bg-tablet@1x.jpg");
+  }
+  .section {
+    padding: 75px 0;
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  body {
+    background-image: url("../img/hero/hero-bg-tablet@2x.jpg");
+  }
+}
+@media screen and (min-width: 1280px) {
+  body {
+    background-image: url("../img/hero/hero-bg-desktop@1x.jpg");
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1280px),
+  screen and (min-resolution: 192dpi) and (min-width: 1280px),
+  screen and (min-resolution: 2dppx) and (min-width: 1280px) {
+  body {
+    background-image: url("../img/hero/hero-bg-desktop@2x.jpg");
+  }
+}
+@media screen and (min-width: 1440px) {
+  body {
+    background-image: url("../img/hero/hero-bg-desktop1440@1x.jpg");
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1440px),
+  screen and (min-resolution: 192dpi) and (min-width: 1440px),
+  screen and (min-resolution: 2dppx) and (min-width: 1440px) {
+  body {
+    background-image: url("../img/hero/hero-bg-desktop1440@2x.jpg");
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  padding-left: 0;
+  margin: 0;
+}
+
+label {
+  user-select: none;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+img,
+svg {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.container {
+  max-width: 375px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
+}
+/* Page Header */
+.page-header {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.page-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-text-color);
+  border-radius: 8px;
+}
+.logo {
+  color: var(--accent-color);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+.page-nav-list {
+  display: flex;
+  gap: 4px;
+}
+.page-nav-link {
+  display: block;
+  text-align: center;
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 1.3; /* 11.7px */
+  text-transform: uppercase;
+  color: var(--primary-text-color);
+  background-color: var(--default-btn-color);
+  padding: 15px 0;
+  width: 92px;
+  border-radius: 8px;
+  transition: background-color var(--default-transition-properties);
+}
+.page-nav-link.current,
+.page-nav-link:hover,
+.page-nav-link:focus {
+  background-color: var(--accent-color);
+}
+.socials-list {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.header-socials-link {
+  fill: var(--accent-color);
+}
+.header-socials-link:hover,
+.header-socials-link:focus {
+  fill: #11131f;
+}
+.socials-svg {
+  transition: fill var(--default-transition-properties);
+}
+.toggle-mobile-menu-btn {
+  stroke: black;
+  display: block;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  line-height: 0;
+}
+/* /Page Header */
+
+@media screen and (max-width: 767px) {
+  .page-header-container {
+    padding: 7px 20px;
+  }
+  .logo {
+    font-size: 14px;
+  }
+  .page-nav {
+    display: none;
+  }
+  .page-nav-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .mobile-socials-list {
+    margin-top: auto;
+  }
+  .header-socials-list {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page-header-container {
+    padding: 4px 20px;
+  }
+  .logo {
+    font-size: 20px;
+  }
+  .toggle-mobile-menu-btn {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .page-header {
+    padding: 0 100px;
+  }
+}
+.hero-section {
+  padding-top: 260px;
+  padding-bottom: 243px;
+  text-align: center;
+}
+
+.hero-tittle {
+  max-width: 320px;
+  margin: 0 auto;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--primary-text-color);
+  margin-bottom: 24px;
+}
+
+.hero-subtittle {
+  max-width: 290px;
+  margin: 0 auto;
+  color: rgba(251, 251, 251, 0.7);
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.4;
+  margin: 0 auto;
+  margin-bottom: 38px;
+}
+
+.hero-link {
+  display: inline-block;
+  min-width: 138px;
+  padding: 14px 32px;
+  border-radius: 15px;
+  background: var(--accent-color);
+  color: var(--primary-text-color);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  transition: background-color var(--default-transition-properties),
+    color var(--default-transition-properties);
+}
+
+.hero-link:hover,
+.hero-link:focus {
+  background-color: var(--primary-text-color);
+  color: var(--accent-color);
+}
+
+@media screen and (min-width: 768px) {
+  .hero-section {
+    padding-top: 345px;
+    padding-bottom: 150px;
+  }
+
+  .hero-tittle {
+    font-size: 70px;
+    max-width: 704px;
+  }
+
+  .hero-subtittle {
+    max-width: 570px;
+    font-size: 16px;
+    margin-bottom: 48px;
+  }
+
+  .hero-link {
+    font-size: 18px;
+    line-height: 1.1;
+    padding: 16px 40px;
+    min-width: 175px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero-section {
+    padding-top: 235px;
+    padding-bottom: 180px;
+  }
+
+  .hero-tittle {
+    font-size: 80px;
+    max-width: 920px;
+  }
+}
+.about-us-section {
+  padding-top: 0;
+}
+
+.container-about {
+  background-color: var(--primary-text-color);
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .container-about {
+    gap: 50px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container-about {
+    gap: 120px;
+  }
+}
+
+.about-us-container {
+  display: flex;
+  max-width: 335px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  border-radius: 24px;
+  padding: 40px 20px 40px 20px;
+  background-color: var(--primary-text-color);
+}
+
+@media screen and (min-width: 768px) {
+  .about-us-container {
+    max-width: 704px;
+    padding: 50px 136px 50px 32px;
+    gap: 50px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .about-us-container {
+    flex-direction: row;
+    max-width: 1180px;
+    max-width: 1180px;
+    padding: 50px 50px 120px 50px;
+    gap: 189px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .about-us-container {
+    max-width: 1340px;
+    padding: 50px 100px 120px 50px;
+
+    gap: 299px;
+  }
+}
+
+.about-us-text-header {
+  max-width: 288px;
+
+  color: var(--accent-color);
+  font-family: Helvetica Neue;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+@media screen and (min-width: 768px) {
+  .about-us-text-header {
+    max-width: 512px;
+    height: 144px;
+    font-size: 48px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .about-us-text-header {
+    max-width: 513px; /* 537 */
+  }
+}
+
+.about-us-text-container {
+  display: flex;
+  max-width: 295px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-us-text-container {
+    max-width: 389px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .about-us-text-container {
+    max-width: 354px;
+  }
+}
+
+.about-us-text-bold {
+  max-width: 295px;
+  color: var(--accent-color);
+  font-family: Helvetica Neue;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+@media screen and (min-width: 768px) {
+  .about-us-text-bold {
+    max-width: 389px;
+    font-size: 23px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .about-us-text-bold {
+    max-width: 354px;
+
+    letter-spacing: -0.02em;
+  }
+}
+
+.about-us-text-small {
+  max-width: 295px;
+  color: #040306;
+  font-family: Helvetica Neue;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: -0.02em;
+  opacity: 0.4;
+}
+
+@media screen and (min-width: 768px) {
+  .about-us-text-small {
+    max-width: 385px;
+    font-size: 13px;
+    line-height: 1.15;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .about-us-text-small {
+    max-width: 354px;
+  }
+}
+
+.about-us-image-container {
+  overflow: hidden;
+}
+
+@media screen and (min-width: 1280px) {
+  .about-us-image-container {
+    display: flex;
+    align-items: start;
+    border-radius: 24px;
+  }
+}
+
+.about-us-image {
+  margin-top: 0;
+  margin-left: 0;
+  width: 100%;
+  border-radius: 24px;
+
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 1280px) {
+  .about-us-image {
+    min-width: 1340px;
+  }
+}
+.our-yachts-section {
+  text-align: center;
+}
+.our-yachts-title {
+  color: var(--priamary-text-color);
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  max-width: 270px;
+  margin: 0 auto 40px auto;
+}
+.our-yachts-list {
+  display: flex;
+  justify-content: center;
+}
+.our-yachts-item {
+  background-color: var(--primary-text-color);
+  padding: 16px 16px 32px 16px;
+  border-radius: 24px;
+  max-width: 334px;
+}
+.our-yachts-img {
+  width: 100%;
+  object-fit: contain;
+}
+.yachts-two {
+  display: none;
+}
+.yachts-three {
+  display: none;
+}
+.our-yahts-characteristics-table {
+  padding: 32px 16px 0 16px;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+/* .container-yachts-text {
+} */
+.our-yachts-name {
+  padding-bottom: 16px;
+  display: flex;
+  align-items: flex-start;
+  color: var(--accent-color);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+}
+.our-yachts-class {
+  padding-bottom: 16px;
+  width: 90px;
+  color: rgba(27, 65, 75, 0.4);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.yacht-characteristics-container-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+.our-yachts-name,
+.our-yachts-class {
+  border-bottom: 2px solid rgba(4, 3, 6, 0.1);
+}
+.our-yachts-question {
+  text-align: left;
+  color: rgba(27, 65, 75, 0.4);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 0;
+}
+.our-yachts-answer {
+  text-align: left;
+  color: var(--accent-color);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+  padding: 0;
+}
+.our-yachts-row:not(:last-child) .our-yachts-question,
+.our-yachts-row:not(:last-child) .our-yachts-answer {
+  padding-bottom: 6px;
+}
+.our-yachts-row:nth-child(2) .our-yachts-question,
+.our-yachts-row:nth-child(2) .our-yachts-answer {
+  padding-top: 16px;
+}
+.our-yachts-rental-link {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 14px 32px;
+  border-radius: 15px;
+  border: 1px solid rgba(251, 251, 251, 0.35);
+  color: var(--primary-text-color);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+  transition: background-color var(--default-transition-properties),
+    color var(--default-transition-properties);
+}
+.our-yachts-rental-link:hover,
+.our-yachts-rental-link:focus {
+  color: var(--accent-color);
+  background-color: var(--primary-text-color);
+  border-color: transparent;
+}
+.our-yachts-name-plus {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .container-yachts {
+    gap: 75px;
+  }
+  .our-yachts-title {
+    font-size: 48px;
+    max-width: 540px;
+    margin-bottom: 75px;
+  }
+  .our-yachts-list {
+    gap: 32px;
+  }
+  .our-yachts-item {
+    max-width: 336px;
+  }
+  .yachts-two {
+    display: flex;
+    flex-direction: column;
+  }
+  .our-yachts-name {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  .our-yachts-rental-link {
+    margin-top: 50px;
+    font-size: 18px;
+    padding: 16px 40px;
+    line-height: 1.1;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .our-yachts-title {
+    max-width: 615px;
+  }
+  .our-yachts-list {
+    gap: 25px;
+  }
+  .our-yachts-item {
+    max-width: 377px;
+  }
+  .yachts-three {
+    display: flex;
+    flex-direction: column;
+  }
+  .our-yachts-name-plus {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .our-yachts-list {
+    gap: 32px;
+  }
+  .our-yachts-item {
+    max-width: 392px;
+  }
+}
+
+/* PHONE */
+.advantages-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.advantages-list {
+  counter-reset: my-counter;
+  border-radius: 24px;
+  background: var(--accent-color);
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.advantages-item {
+  position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  .advantages-list {
+    padding: 80px 20px;
+    max-width: 335px;
+    gap: 40px;
+  }
+
+  .advantages-item {
+    width: 100%;
+    height: 94px;
+  }
+
+  .advantages-container {
+    gap: 20px;
+  }
+
+  .advantages-pic {
+    object-fit: contain;
+    width: 100%;
+  }
+}
+
+.advantages-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 2px;
+  border-radius: 18px;
+  background: rgba(251, 251, 251, 0.1);
+}
+
+.counter {
+  display: block;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  margin-bottom: 38px;
+}
+
+.advantages-text {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: -0.02em;
+}
+
+.advantages-pic {
+  overflow: hidden;
+  border-radius: 24px;
+  flex-shrink: 1;
+}
+
+/* PHONE */
+
+/* TABLET */
+@media screen and (min-width: 768px) {
+  .advantages-container {
+    justify-content: space-between;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    .advantages-container {
+      gap: 32px;
+    }
+
+    .advantages-item {
+      width: 100%;
+      height: 100px;
+    }
+  }
+  .advantages-list {
+    padding: 90px 32px;
+    max-width: 704px;
+    height: 424px;
+    align-content: space-between;
+    justify-content: space-between;
+  }
+
+  .advantages-item {
+    width: calc((100% - 32px) / 2);
+  }
+
+  .counter {
+    font-size: 32px;
+  }
+
+  .advantages-text {
+    font-size: 13px;
+    line-height: 1.15;
+  }
+
+  .advantages-pic {
+    width: 704px;
+    height: 424px;
+  }
+}
+/* TABLET */
+
+/* DESKTOP */
+@media screen and (min-width: 1280px) {
+  .advantages-container {
+    flex-direction: row;
+  }
+
+  .advantages-list {
+    padding: 90px 50px;
+    max-width: 716px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .advantages-item {
+    width: calc((100% - 44px) / 2);
+  }
+
+  .advantages-pic {
+    width: 432px;
+  }
+}
+/* DESKTOP */
+
+/* DESKTOP 1440 */
+@media screen and (min-width: 1440px) {
+  .advantages-list {
+    max-width: 768px;
+  }
+
+  .advantages-item {
+    height: 100px;
+  }
+
+  .advantages-pic {
+    width: 540px;
+  }
+}
+/* DESKTOP 1440 */
+
+.section-rent-yacht-title {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 40px;
+}
+.section-rent-yacht-container {
+  margin-bottom: 80px;
+}
+
+.section-rent-yacht-form {
+  margin-bottom: 18px;
+}
+.section-rent-yacht-input {
+  width: 100%;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid rgba(251, 251, 251, 0.2);
+  background-color: transparent;
+  outline: 0px solid transparent;
+  padding-left: 18px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  transition: border-color var(--default-transition-properties);
+  color: rgba(251, 251, 251, 0.4);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.16;
+}
+.section-rent-yacht-input:hover,
+.section-rent-yacht-input:focus {
+  color: var(--primary-text-color);
+  border: 1px solid rgba(251, 251, 251, 0.5);
+}
+
+.section-rent-yacht-form-comment {
+  margin-bottom: 40px;
+}
+
+.section-rent-yacht-form-comment-textarea {
+  width: 100%;
+  height: 108px;
+  font-size: 12px;
+  line-height: 1.16;
+  color: rgba(251, 251, 251, 0.4);
+  border: 1px solid rgba(251, 251, 251, 0.2);
+  border-radius: 12px;
+  background-color: transparent;
+  padding-left: 18px;
+  padding-top: 14px;
+  outline: transparent;
+  resize: none;
+  transition: border-color var(--default-transition-properties);
+}
+
+.section-rent-yacht-form-comment-textarea:hover,
+.section-rent-yacht-form-comment-textarea:focus {
+  color: var(--primary-text-color);
+  border: 1px solid rgba(251, 251, 251, 0.5);
+}
+
+.section-rent-yacht-button {
+  display: block;
+  min-width: 121px;
+  height: 46px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+  color: var(--primary-text-color);
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 15px;
+  transition: background-color var(--default-transition-properties),
+    color var(--default-transition-properties);
+}
+
+.section-rent-yacht-button:hover,
+.section-rent-yacht-button:focus {
+  color: var(--accent-color);
+  background-color: var(--primary-text-color);
+}
+
+.section-rent-yacht-image {
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  object-fit: contain;
+}
+
+@media screen and (min-width: 768px) {
+  .section-rent-yacht-title {
+    font-size: 48px;
+    margin-bottom: 50px;
+  }
+
+  .section-rent-yacht-container {
+    margin-bottom: 100px;
+  }
+
+  /* .section-rent-yacht-form-and-button {
+        margin-bottom: 100px;
+        } */
+
+  .section-rent-yacht-input {
+    height: 54px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    font-size: 14px;
+    line-height: 1.28;
+  }
+
+  .section-rent-yacht-form-comment {
+    margin-bottom: 50px;
+  }
+
+  .section-rent-yacht-form-comment-textarea {
+    height: 116px;
+    font-size: 14px;
+    line-height: 1.28;
+    padding-top: 18px;
+  }
+
+  .section-rent-yacht-button {
+    min-width: 192px;
+    height: 56px;
+    font-size: 18px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    /* margin-bottom: 100px; */
+  }
+
+  .section-rent-yacht-image {
+    width: 704px;
+    height: 534px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .section-rent-yacht-container {
+    display: block;
+    max-width: 472px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* .section-rent-yacht-image {
+        width: 704px;
+        height: 534px;
+        } */
+}
+
+@media screen and (min-width: 1280px) {
+  /* .section-rent-yacht-form-and-button {
+        margin-bottom: 0;
+    } */
+  .section-rent-yacht-image {
+    width: 658px;
+    height: 534px;
+  }
+  .section-rent-yacht-container {
+    display: block;
+    margin-left: 50px;
+    margin-bottom: 0;
+  }
+  .section-rent-yacht-additional-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+  .section-rent-yacht-input {
+    width: 472px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .section-rent-yacht-image {
+    width: 768px;
+    height: 534px;
+  }
+}
+
+.reviews-section {
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 80px;
+  background-color: var(--primary-bg-color);
+}
+@media screen and (min-width: 375px) {
+  .reviews-section {
+    max-width: 335px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .reviews-section {
+    max-width: 768px;
+    padding-bottom: 150px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .reviews-section {
+    max-width: 1280px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .reviews-section {
+    max-width: 1440px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+.reviews-title {
+  max-width: 280px;
+  color: var(--primary-text-color);
+  text-align: center;
+  margin: 0 auto;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 25px;
+}
+@media screen and (min-width: 375px) {
+  .reviews-title {
+    max-width: 335px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .reviews-title {
+    max-width: 704px;
+    font-size: 48px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .reviews-title {
+    max-width: 854px;
+  }
+}
+.reviews-text {
+  max-width: 280px;
+  color: rgba(251, 251, 251, 0.4);
+  text-align: center;
+  margin: 0 auto;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: -0.02em;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 375px) {
+  .reviews-text {
+    max-width: 335px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .reviews-text {
+    max-width: 571px;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    margin-bottom: 75px;
+  }
+}
+.reviews-list {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .reviews-list {
+    gap: 32px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .reviews-list {
+    gap: 26px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .reviews-list {
+    gap: 32px;
+  }
+}
+.reviews-card {
+  max-width: 280px;
+  padding: 32px 8px;
+  border-radius: 24px;
+  background: var(--primary-text-color);
+}
+@media screen and (min-width: 375px) {
+  .reviews-card {
+    max-width: 335px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .reviews-card {
+    max-width: 336px;
+    width: calc((100% - 32px) / 2);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .reviews-card {
+    max-width: 376px;
+    padding: 32px 28px;
+    width: calc((100% - 52px) / 3);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .reviews-card {
+    max-width: 392px;
+    padding: 32px 36px;
+    width: calc((100% - 64px) / 3);
+  }
+}
+.reviews-card.invisible {
+  display: none;
+}
+@media screen and (min-width: 1280px) {
+  .reviews-card.invisible {
+    display: block;
+  }
+}
+.reviews-card.current {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .reviews-card.current {
+    display: block;
+  }
+}
+.reviews-img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+}
+.reviews-blok {
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+@media screen and (min-width: 375px) {
+  .reviews-blok {
+    max-width: 303px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .reviews-blok {
+    max-width: 288px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .reviews-blok {
+    max-width: 293px;
+  }
+}
+.reviews-name {
+  color: #040306;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.reviews-info {
+  color: rgba(4, 3, 6, 0.4);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+}
+
+.page-footer {
+  padding: 0 10px;
+}
+.footer-container {
+  position: relative;
+  background-color: var(--accent-color);
+  border-radius: 20px 20px 0 0;
+  padding: 50px 0 20px 0;
+}
+.footer-logo-socials-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  margin-bottom: 67px;
+}
+.footer-logo {
+  color: var(--primary-text-color);
+}
+.footer-nav {
+  display: block;
+}
+.footer-nav-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 4px;
+}
+.footer-nav-link {
+  background-color: rgba(251, 251, 251, 0.3);
+  transition: background-color var(--default-transition-properties),
+    color var(--default-transition-properties);
+}
+.footer-socials-link {
+  fill: var(--primary-text-color);
+  transition: fill var(--default-transition-properties);
+}
+.footer-socials-link:hover,
+.footer-socials-link:focus {
+  fill: #11131f;
+}
+.footer-nav-link.current,
+.footer-nav-link:hover,
+.footer-nav-link:focus {
+  background-color: var(--primary-text-color);
+  color: var(--accent-color);
+}
+.footer-text {
+  max-width: 335px;
+  color: var(--primary-text-color);
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.36px;
+  margin: 0 auto 80px auto;
+}
+.footer-bottom-privacy-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.footer-yacht-adv,
+.footer-privacy-policy-link {
+  color: rgba(251, 251, 251, 0.4);
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.16; /* 116.667% */
+  letter-spacing: 0.36px;
+}
+.footer-nav-desktop {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-nav {
+    margin-bottom: 80px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer-logo-socials-container {
+    padding: 0 48px;
+    margin-bottom: 96px;
+  }
+  .footer-nav-desktop {
+    display: flex;
+  }
+  .footer-nav {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .footer-text {
+    max-width: 640px;
+    margin-bottom: 99px;
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .footer-logo-socials-container {
+    padding: 0 75px;
+  }
+  .footer-text {
+    max-width: 693px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mobile-menu-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 259px;
+    padding-bottom: 40px;
+    background-color: var(--primary-bg-color);
+    opacity: 100%;
+    visibility: visible;
+    transition: opacity var(--default-transition-properties),
+      visibility var(--default-transition-properties);
+  }
+  .mobile-menu-container.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .mobile-socials-link {
+    fill: var(--primary-text-color);
+  }
+  .mobile-socials-link:hover,
+  .mobile-socials-link:focus {
+    fill: var(--accent-color);
+  }
+  .toggle-mobile-menu-svg.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu-container {
+    display: none;
+  }
+}
