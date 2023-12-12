@@ -2,23 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <meta
+      name="description"
+      content="YachtsJet offers luxury yacht rentals for the ultimate adventure on the high seas. Explore our top-of-the-line yachts with spacious decks, state-of-the-art technology, and impeccable service. Choose from a fleet of prestigious yachts like Arrow, Benetti Oasis 40M, and Belle Anna. Embark on an unforgettable journey surrounded by breathtaking views and enjoy water sports, fishing, sightseeing tours, and relaxation. Rent a yacht now for an exclusive and memorable experience."
+    />
+    <link rel="icon" type="image/x-icon" href="./img/yacht.ico" />
+    <title>YachtsJet</title>
+    <!-- Modern Normilize -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+    />
+    <!-- Our Styles -->
     <link rel="stylesheet" href="./css/styles.css" />
+    <!-- Open Mobile Script -->
+    <script type="module" src="./js/open-mobile.js" defer></script>
   </head>
   <body>
-    <load ="partials/header.html" />
-
-    <section>
-      <h1>Lorem ipsum dolor sit amet.</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="./img/javascript.svg" alt="" />
-    </section>
-
-    <!-- Loads the specified .html file -->
-    <load ="partials/vite-promo.html" />
-
-    <script type="module" src="/main.js"></script>
+    <load ="partials/page-header.html" />
+    <main>
+      <load ="partials/hero.html" />
+      <load ="partials/about-us.html" />
+      <load ="partials/our-yachts.html" />
+      <load ="partials/advantages.html" />
+      <load ="partials/rent-yacht.html" />
+      <load ="partials/reviews.html" />
+    </main>
+    <load ="partials/page-footer.html" />
+    <load ="partials/mobile-menu.html" />
   </body>
 </html>

@@ -1,0 +1,110 @@
+.page-footer {
+  padding: 0 10px;
+}
+.footer-container {
+  position: relative;
+  background-color: var(--accent-color);
+  border-radius: 20px 20px 0 0;
+  padding: 50px 0 20px 0;
+}
+.footer-logo-socials-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  margin-bottom: 67px;
+}
+.footer-logo {
+  color: var(--primary-text-color);
+}
+.footer-nav {
+  display: block;
+}
+.footer-nav-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 4px;
+}
+.footer-nav-link {
+  background-color: rgba(251, 251, 251, 0.3);
+  transition: background-color var(--default-transition-properties),
+    color var(--default-transition-properties);
+}
+.footer-socials-link {
+  fill: var(--primary-text-color);
+  transition: fill var(--default-transition-properties);
+}
+.footer-socials-link:hover,
+.footer-socials-link:focus {
+  fill: #11131f;
+}
+.footer-nav-link.current,
+.footer-nav-link:hover,
+.footer-nav-link:focus {
+  background-color: var(--primary-text-color);
+  color: var(--accent-color);
+}
+.footer-text {
+  max-width: 335px;
+  color: var(--primary-text-color);
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.36px;
+  margin: 0 auto 80px auto;
+}
+.footer-bottom-privacy-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.footer-yacht-adv,
+.footer-privacy-policy-link {
+  color: rgba(251, 251, 251, 0.4);
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.16; /* 116.667% */
+  letter-spacing: 0.36px;
+}
+.footer-nav-desktop {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-nav {
+    margin-bottom: 80px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer-logo-socials-container {
+    padding: 0 48px;
+    margin-bottom: 96px;
+  }
+  .footer-nav-desktop {
+    display: flex;
+  }
+  .footer-nav {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .footer-text {
+    max-width: 640px;
+    margin-bottom: 99px;
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .footer-logo-socials-container {
+    padding: 0 75px;
+  }
+  .footer-text {
+    max-width: 693px;
+  }
+}

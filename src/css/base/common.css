@@ -1,0 +1,123 @@
+:root {
+  --primary-text-color: #fbfbfb;
+  --primary-bg-color: #0e1823;
+  --default-btn-color: rgba(27, 65, 75, 0.5);
+  --accent-color: #1b414b;
+  --default-transition-properties: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  color: var(--primary-text-color);
+  background-color: var(--primary-bg-color);
+  background-image: url("../../img/hero/hero-bg-mobile@1x.jpg");
+  background-position: center top;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 767px) {
+  .section {
+    padding: 40px 0;
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+  screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px) {
+  body {
+    background-image: url("../../img/hero/hero-bg-mobile@2x.jpg");
+  }
+}
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url("../../img/hero/hero-bg-tablet@1x.jpg");
+  }
+  .section {
+    padding: 75px 0;
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  body {
+    background-image: url("../../img/hero/hero-bg-tablet@2x.jpg");
+  }
+}
+@media screen and (min-width: 1280px) {
+  body {
+    background-image: url("../../img/hero/hero-bg-desktop@1x.jpg");
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1280px),
+  screen and (min-resolution: 192dpi) and (min-width: 1280px),
+  screen and (min-resolution: 2dppx) and (min-width: 1280px) {
+  body {
+    background-image: url("../../img/hero/hero-bg-desktop@2x.jpg");
+  }
+}
+@media screen and (min-width: 1440px) {
+  body {
+    background-image: url("../../img/hero/hero-bg-desktop1440@1x.jpg");
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1440px),
+  screen and (min-resolution: 192dpi) and (min-width: 1440px),
+  screen and (min-resolution: 2dppx) and (min-width: 1440px) {
+  body {
+    background-image: url("../../img/hero/hero-bg-desktop1440@2x.jpg");
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  padding-left: 0;
+  margin: 0;
+}
+
+label {
+  user-select: none;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+img,
+svg {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
