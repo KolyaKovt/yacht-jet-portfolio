@@ -1,3 +1,4 @@
+/* Common Styles */
 :root {
   --primary-text-color: #fbfbfb;
   --primary-bg-color: #0e1823;
@@ -121,6 +122,9 @@ button {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+/* Common Styles */
+
+/* Container */
 .container {
   max-width: 375px;
   padding-left: 20px;
@@ -149,6 +153,8 @@ button {
     max-width: 1440px;
   }
 }
+/* /Container */
+
 /* Page Header */
 .page-header {
   width: 100%;
@@ -223,8 +229,6 @@ button {
   border: none;
   line-height: 0;
 }
-/* /Page Header */
-
 @media screen and (max-width: 767px) {
   .page-header-container {
     padding: 7px 20px;
@@ -246,7 +250,6 @@ button {
     display: none;
   }
 }
-
 @media screen and (min-width: 768px) {
   .page-header-container {
     padding: 4px 20px;
@@ -258,18 +261,19 @@ button {
     display: none;
   }
 }
-
 @media screen and (min-width: 1280px) {
   .page-header {
     padding: 0 100px;
   }
 }
+/* /Page Header */
+
+/* Hero Section */
 .hero-section {
   padding-top: 260px;
   padding-bottom: 243px;
   text-align: center;
 }
-
 .hero-tittle {
   max-width: 320px;
   margin: 0 auto;
@@ -280,7 +284,6 @@ button {
   color: var(--primary-text-color);
   margin-bottom: 24px;
 }
-
 .hero-subtittle {
   max-width: 290px;
   margin: 0 auto;
@@ -291,7 +294,6 @@ button {
   margin: 0 auto;
   margin-bottom: 38px;
 }
-
 .hero-link {
   display: inline-block;
   min-width: 138px;
@@ -306,30 +308,25 @@ button {
   transition: background-color var(--default-transition-properties),
     color var(--default-transition-properties);
 }
-
 .hero-link:hover,
 .hero-link:focus {
   background-color: var(--primary-text-color);
   color: var(--accent-color);
 }
-
 @media screen and (min-width: 768px) {
   .hero-section {
     padding-top: 345px;
     padding-bottom: 150px;
   }
-
   .hero-tittle {
     font-size: 70px;
     max-width: 704px;
   }
-
   .hero-subtittle {
     max-width: 570px;
     font-size: 16px;
     margin-bottom: 48px;
   }
-
   .hero-link {
     font-size: 18px;
     line-height: 1.1;
@@ -337,40 +334,37 @@ button {
     min-width: 175px;
   }
 }
-
 @media screen and (min-width: 1280px) {
   .hero-section {
     padding-top: 235px;
     padding-bottom: 180px;
   }
-
   .hero-tittle {
     font-size: 80px;
     max-width: 920px;
   }
 }
+/* /Hero Section */
+
+/* About Us Section */
 .about-us-section {
   padding-top: 0;
 }
-
 .container-about {
   background-color: var(--primary-text-color);
   border-radius: 24px;
   overflow: hidden;
 }
-
 @media screen and (min-width: 768px) {
   .container-about {
     gap: 50px;
   }
 }
-
 @media screen and (min-width: 1280px) {
   .container-about {
     gap: 120px;
   }
 }
-
 .about-us-container {
   display: flex;
   max-width: 335px;
@@ -381,7 +375,6 @@ button {
   padding: 40px 20px 40px 20px;
   background-color: var(--primary-text-color);
 }
-
 @media screen and (min-width: 768px) {
   .about-us-container {
     max-width: 704px;
@@ -389,7 +382,6 @@ button {
     gap: 50px;
   }
 }
-
 @media screen and (min-width: 1280px) {
   .about-us-container {
     flex-direction: row;
@@ -399,7 +391,6 @@ button {
     gap: 189px;
   }
 }
-
 @media screen and (min-width: 1440px) {
   .about-us-container {
     max-width: 1340px;
@@ -408,7 +399,6 @@ button {
     gap: 299px;
   }
 }
-
 .about-us-text-header {
   max-width: 288px;
 
@@ -420,7 +410,6 @@ button {
   line-height: 1;
   letter-spacing: -0.02em;
 }
-
 @media screen and (min-width: 768px) {
   .about-us-text-header {
     max-width: 512px;
@@ -428,13 +417,11 @@ button {
     font-size: 48px;
   }
 }
-
 @media screen and (min-width: 1280px) {
   .about-us-text-header {
     max-width: 513px; /* 537 */
   }
 }
-
 .about-us-text-container {
   display: flex;
   max-width: 295px;
@@ -442,19 +429,16 @@ button {
   align-items: flex-start;
   gap: 20px;
 }
-
 @media screen and (min-width: 768px) {
   .about-us-text-container {
     max-width: 389px;
   }
 }
-
 @media screen and (min-width: 1280px) {
   .about-us-text-container {
     max-width: 354px;
   }
 }
-
 .about-us-text-bold {
   max-width: 295px;
   color: var(--accent-color);
@@ -465,14 +449,12 @@ button {
   line-height: 1;
   letter-spacing: -0.02em;
 }
-
 @media screen and (min-width: 768px) {
   .about-us-text-bold {
     max-width: 389px;
     font-size: 23px;
   }
 }
-
 @media screen and (min-width: 1280px) {
   .about-us-text-bold {
     max-width: 354px;
@@ -480,7 +462,6 @@ button {
     letter-spacing: -0.02em;
   }
 }
-
 .about-us-text-small {
   max-width: 295px;
   color: #040306;
@@ -492,7 +473,6 @@ button {
   letter-spacing: -0.02em;
   opacity: 0.4;
 }
-
 @media screen and (min-width: 768px) {
   .about-us-text-small {
     max-width: 385px;
@@ -500,17 +480,14 @@ button {
     line-height: 1.15;
   }
 }
-
 @media screen and (min-width: 1280px) {
   .about-us-text-small {
     max-width: 354px;
   }
 }
-
 .about-us-image-container {
   overflow: hidden;
 }
-
 @media screen and (min-width: 1280px) {
   .about-us-image-container {
     display: flex;
@@ -518,7 +495,6 @@ button {
     border-radius: 24px;
   }
 }
-
 .about-us-image {
   margin-top: 0;
   margin-left: 0;
@@ -527,12 +503,14 @@ button {
 
   background-repeat: no-repeat;
 }
-
 @media screen and (min-width: 1280px) {
   .about-us-image {
     min-width: 1340px;
   }
 }
+/* /About Us Section */
+
+/* Our Yachts Section */
 .our-yachts-section {
   text-align: center;
 }
@@ -571,8 +549,6 @@ button {
   border-collapse: separate;
   border-spacing: 0;
 }
-/* .container-yachts-text {
-} */
 .our-yachts-name {
   padding-bottom: 16px;
   display: flex;
@@ -654,7 +630,6 @@ button {
 .our-yachts-name-plus {
   display: none;
 }
-
 @media screen and (min-width: 768px) {
   .container-yachts {
     gap: 75px;
@@ -711,13 +686,13 @@ button {
     max-width: 392px;
   }
 }
+/* /Our Yachts Section */
 
-/* PHONE */
+/* Advantages Section */
 .advantages-container {
   display: flex;
   flex-direction: column;
 }
-
 .advantages-list {
   counter-reset: my-counter;
   border-radius: 24px;
@@ -726,33 +701,27 @@ button {
   flex-wrap: wrap;
   margin: 0;
 }
-
 .advantages-item {
   position: relative;
 }
-
 @media screen and (max-width: 767px) {
   .advantages-list {
     padding: 80px 20px;
     max-width: 335px;
     gap: 40px;
   }
-
   .advantages-item {
     width: 100%;
     height: 94px;
   }
-
   .advantages-container {
     gap: 20px;
   }
-
   .advantages-pic {
     object-fit: contain;
     width: 100%;
   }
 }
-
 .advantages-item::after {
   content: "";
   position: absolute;
@@ -764,7 +733,6 @@ button {
   border-radius: 18px;
   background: rgba(251, 251, 251, 0.1);
 }
-
 .counter {
   display: block;
   font-size: 28px;
@@ -774,7 +742,6 @@ button {
   letter-spacing: -0.05em;
   margin-bottom: 38px;
 }
-
 .advantages-text {
   font-size: 12px;
   font-style: normal;
@@ -782,16 +749,11 @@ button {
   line-height: 1.17;
   letter-spacing: -0.02em;
 }
-
 .advantages-pic {
   overflow: hidden;
   border-radius: 24px;
   flex-shrink: 1;
 }
-
-/* PHONE */
-
-/* TABLET */
 @media screen and (min-width: 768px) {
   .advantages-container {
     justify-content: space-between;
@@ -800,7 +762,6 @@ button {
     .advantages-container {
       gap: 32px;
     }
-
     .advantages-item {
       width: 100%;
       height: 100px;
@@ -813,66 +774,52 @@ button {
     align-content: space-between;
     justify-content: space-between;
   }
-
   .advantages-item {
     width: calc((100% - 32px) / 2);
   }
-
   .counter {
     font-size: 32px;
   }
-
   .advantages-text {
     font-size: 13px;
     line-height: 1.15;
   }
-
   .advantages-pic {
     width: 704px;
     height: 424px;
   }
 }
-/* TABLET */
-
-/* DESKTOP */
 @media screen and (min-width: 1280px) {
   .advantages-container {
     flex-direction: row;
   }
-
   .advantages-list {
     padding: 90px 50px;
     max-width: 716px;
     display: flex;
     flex-wrap: wrap;
   }
-
   .advantages-item {
     width: calc((100% - 44px) / 2);
   }
-
   .advantages-pic {
     width: 432px;
   }
 }
-/* DESKTOP */
-
-/* DESKTOP 1440 */
 @media screen and (min-width: 1440px) {
   .advantages-list {
     max-width: 768px;
   }
-
   .advantages-item {
     height: 100px;
   }
-
   .advantages-pic {
     width: 540px;
   }
 }
-/* DESKTOP 1440 */
+/* /Advantages Section */
 
+/* Rent Yacht Section */
 .section-rent-yacht-title {
   font-size: 28px;
   font-weight: 500;
@@ -883,7 +830,6 @@ button {
 .section-rent-yacht-container {
   margin-bottom: 80px;
 }
-
 .section-rent-yacht-form {
   margin-bottom: 18px;
 }
@@ -908,11 +854,9 @@ button {
   color: var(--primary-text-color);
   border: 1px solid rgba(251, 251, 251, 0.5);
 }
-
 .section-rent-yacht-form-comment {
   margin-bottom: 40px;
 }
-
 .section-rent-yacht-form-comment-textarea {
   width: 100%;
   height: 108px;
@@ -928,13 +872,11 @@ button {
   resize: none;
   transition: border-color var(--default-transition-properties);
 }
-
 .section-rent-yacht-form-comment-textarea:hover,
 .section-rent-yacht-form-comment-textarea:focus {
   color: var(--primary-text-color);
   border: 1px solid rgba(251, 251, 251, 0.5);
 }
-
 .section-rent-yacht-button {
   display: block;
   min-width: 121px;
@@ -950,34 +892,25 @@ button {
   transition: background-color var(--default-transition-properties),
     color var(--default-transition-properties);
 }
-
 .section-rent-yacht-button:hover,
 .section-rent-yacht-button:focus {
   color: var(--accent-color);
   background-color: var(--primary-text-color);
 }
-
 .section-rent-yacht-image {
   width: 100%;
   border-radius: 24px;
   overflow: hidden;
   object-fit: contain;
 }
-
 @media screen and (min-width: 768px) {
   .section-rent-yacht-title {
     font-size: 48px;
     margin-bottom: 50px;
   }
-
   .section-rent-yacht-container {
     margin-bottom: 100px;
   }
-
-  /* .section-rent-yacht-form-and-button {
-        margin-bottom: 100px;
-        } */
-
   .section-rent-yacht-input {
     height: 54px;
     padding-top: 18px;
@@ -985,33 +918,27 @@ button {
     font-size: 14px;
     line-height: 1.28;
   }
-
   .section-rent-yacht-form-comment {
     margin-bottom: 50px;
   }
-
   .section-rent-yacht-form-comment-textarea {
     height: 116px;
     font-size: 14px;
     line-height: 1.28;
     padding-top: 18px;
   }
-
   .section-rent-yacht-button {
     min-width: 192px;
     height: 56px;
     font-size: 18px;
     line-height: 1.1;
     letter-spacing: -0.02em;
-    /* margin-bottom: 100px; */
   }
-
   .section-rent-yacht-image {
     width: 704px;
     height: 534px;
   }
 }
-
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .section-rent-yacht-container {
     display: block;
@@ -1019,16 +946,8 @@ button {
     margin-left: auto;
     margin-right: auto;
   }
-  /* .section-rent-yacht-image {
-        width: 704px;
-        height: 534px;
-        } */
 }
-
 @media screen and (min-width: 1280px) {
-  /* .section-rent-yacht-form-and-button {
-        margin-bottom: 0;
-    } */
   .section-rent-yacht-image {
     width: 658px;
     height: 534px;
@@ -1047,14 +966,15 @@ button {
     width: 472px;
   }
 }
-
 @media screen and (min-width: 1440px) {
   .section-rent-yacht-image {
     width: 768px;
     height: 534px;
   }
 }
+/* /Rent Yacht Section */
 
+/* Review Section */
 .reviews-section {
   max-width: 280px;
   margin-left: auto;
@@ -1248,7 +1168,9 @@ button {
   line-height: 1.4;
   letter-spacing: -0.02em;
 }
+/* /Review Section */
 
+/* Page Footer */
 .page-footer {
   padding: 0 10px;
 }
@@ -1326,7 +1248,6 @@ button {
 .footer-nav-desktop {
   display: none;
 }
-
 @media screen and (min-width: 768px) {
   .footer-logo-socials-container {
     padding: 0 48px;
@@ -1346,7 +1267,6 @@ button {
     font-size: 32px;
   }
 }
-
 @media screen and (min-width: 1280px) {
   .footer-logo-socials-container {
     padding: 0 75px;
@@ -1355,7 +1275,6 @@ button {
     max-width: 693px;
   }
 }
-
 @media screen and (max-width: 767px) {
   .mobile-menu-container {
     position: fixed;
@@ -1390,9 +1309,9 @@ button {
     pointer-events: none;
   }
 }
-
 @media screen and (min-width: 768px) {
   .mobile-menu-container {
     display: none;
   }
 }
+/* /Page Footer */
