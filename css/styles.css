@@ -551,7 +551,6 @@ button {
   border-spacing: 0;
 }
 .our-yachts-name {
-  padding-bottom: 16px;
   display: flex;
   align-items: flex-start;
   color: var(--accent-color);
@@ -559,17 +558,31 @@ button {
   font-weight: 500;
   line-height: 1.18;
   letter-spacing: -0.045em;
-  text-transform: uppercase;
 }
 .our-yachts-class {
-  padding-bottom: 16px;
   width: 90px;
   color: rgba(27, 65, 75, 0.4);
   font-size: 14px;
   font-weight: 400;
   line-height: 1.16;
   letter-spacing: 0.03em;
+}
+.our-yachts-name,
+.our-yachts-class {
+  position: relative;
   text-transform: uppercase;
+  padding-bottom: 32px;
+}
+.our-yachts-name::after,
+.our-yachts-class::after {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: rgba(4, 3, 6, 0.1);
 }
 .yacht-characteristics-container-left {
   display: flex;
@@ -577,36 +590,31 @@ button {
   align-items: flex-start;
   gap: 6px;
 }
-.our-yachts-name,
-.our-yachts-class {
-  border-bottom: 2px solid rgba(4, 3, 6, 0.1);
+.our-yachts-name-plus {
+  display: none;
 }
 .our-yachts-question {
-  text-align: left;
   color: rgba(27, 65, 75, 0.4);
   font-size: 14px;
   font-weight: 400;
   line-height: 1.18;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  padding: 0;
 }
 .our-yachts-answer {
-  text-align: left;
   color: var(--accent-color);
   font-size: 14px;
   font-weight: 400;
   line-height: 1.18;
   letter-spacing: 0.03em;
-  padding: 0;
+}
+.our-yachts-question,
+.our-yachts-answer {
+  text-align: left;
 }
 .our-yachts-row:not(:last-child) .our-yachts-question,
 .our-yachts-row:not(:last-child) .our-yachts-answer {
-  padding-bottom: 6px;
-}
-.our-yachts-row:nth-child(2) .our-yachts-question,
-.our-yachts-row:nth-child(2) .our-yachts-answer {
-  padding-top: 16px;
+  padding: 0 0 6px 0;
 }
 .our-yachts-rental-link {
   display: inline-block;
@@ -627,9 +635,6 @@ button {
   color: var(--accent-color);
   background-color: var(--primary-text-color);
   border-color: transparent;
-}
-.our-yachts-name-plus {
-  display: none;
 }
 @media screen and (min-width: 768px) {
   .container-yachts {
