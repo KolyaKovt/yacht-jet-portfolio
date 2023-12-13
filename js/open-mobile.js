@@ -14,6 +14,7 @@
   });
 
   function closeMenu() {
+    refs.pageHeader.classList.remove("fixed");
     refs.menu.classList.add("is-hidden");
     refs.closeMenuSvg.classList.add("is-hidden");
     refs.openMenuSvg.classList.remove("is-hidden");
