@@ -141,6 +141,33 @@
             </div>
 
             <picture class="about-us-image-container">
+              <!-- WebP -->
+              <source
+                srcset="
+                  ./img/about-us/about-us-desktop-w.webp    1x,
+                  ./img/about-us/about-us-desktop-w@2x.webp 2x
+                "
+                media="(min-width: 1280px)"
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./img/about-us/about-us-tab.webp    1x,
+                  ./img/about-us/about-us-tab@2x.webp 2x
+                "
+                media="(min-width: 768px)"
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./img/about-us/about-us-mobile.webp    1x,
+                  ./img/about-us/about-us-mobile@2x.webp 2x
+                "
+                media="(max-width: 767px)"
+                type="image/webp"
+              />
+              <!-- /WebP -->
+
               <source
                 srcset="
                   ./img/about-us/about-us-desktop-w.jpg    1x,
@@ -187,6 +214,41 @@
           <!-- Foto Arrow -->
           <li class="our-yachts-item">
             <picture>
+              <!-- WebP -->
+              <source
+                srcset="
+                  ./img/our-yachts/Desktop_1440/arrow-yaht-desktop_1440.webp    1x,
+                  ./img/our-yachts/Desktop_1440/arrow-yaht-desktop_1440@2x.webp 2x
+                "
+                media="(min-width: 1440px)"
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./img/our-yachts/Desktop_1280/arrow-yaht-desktop_1280.webp    1x,
+                  ./img/our-yachts/Desktop_1280/arrow-yaht-desktop_1280@2x.webp 2x
+                "
+                media="(min-width: 1280px)"
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./img/our-yachts/Tablet/arrow-yaht-tablet.webp    1x,
+                  ./img/our-yachts/Tablet/arrow-yaht-tablet@2x.webp 2x
+                "
+                media="(min-width: 768px)"
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./img/our-yachts/Mobile/arrow-yaht-mobile.webp    1x,
+                  ./img/our-yachts/Mobile/arrow-yaht-mobile@2x.webp 2x
+                "
+                media="(max-width: 767px)"
+                type="image/webp"
+              />
+              <!-- /WebP -->
+
               <source
                 srcset="
                   ./img/our-yachts/Desktop_1440/arrow-yaht-desktop_1440.jpg    1x,
@@ -215,10 +277,12 @@
                 "
                 media="(max-width: 767px)"
               />
+
               <img
                 class="our-yachts-img"
                 src="./img/our-yachts/Mobile/arrow-yaht-mobile.jpg"
                 alt="Arrow Yaht"
+                loading="lazy"
               />
             </picture>
 
@@ -254,6 +318,33 @@
           <!--Foto Benetti oasis 40v bo122 -->
           <li class="our-yachts-item yachts-two">
             <picture>
+              <!-- WebP -->
+              <source
+                srcset="
+                  ./img/our-yachts/Desktop_1440/benetti-yaht-desktop_1440.webp    1x,
+                  ./img/our-yachts/Desktop_1440/benetti-yaht-desktop_1440@2x.webp 2x
+                "
+                media="(min-width: 1440px)"
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./img/our-yachts/Desktop_1280/benetti-yaht-desktop_1280.webp    1x,
+                  ./img/our-yachts/Desktop_1280/benetti-yaht-desktop_1280@2x.webp 2x
+                "
+                media="(min-width: 1280px)"
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./img/our-yachts/Tablet/benetti-yaht-tablet.webp    1x,
+                  ./img/our-yachts/Tablet/benetti-yaht-tablet@2x.webp 2x
+                "
+                media="(min-width: 768px)"
+                type="image/webp"
+              />
+              <!-- /WebP -->
+
               <source
                 srcset="
                   ./img/our-yachts/Desktop_1440/benetti-yaht-desktop_1440.jpg    1x,
@@ -275,11 +366,13 @@
                 "
                 media="(min-width: 768px)"
               />
+
               <img
                 class="our-yachts-img"
                 src="./img/our-yachts/Tablet/benetti-yaht-tablet.jpg"
                 alt="benetti
           oasis 40v bo122 yacht"
+                loading="lazy"
               />
             </picture>
 
@@ -318,6 +411,25 @@
           <!-- Foto Belle Anna -->
           <li class="our-yachts-item yachts-item yachts-three">
             <picture>
+              <!-- WebP -->
+              <source
+                srcset="
+                  ./img/our-yachts/Desktop_1440/belle-anna-yaht-desktop_1440.webp    1x,
+                  ./img/our-yachts/Desktop_1440/belle-anna-yaht-desktop_1440@2x.webp 2x
+                "
+                media="(min-width: 1440px)"
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./img/our-yachts/Desktop_1280/belle-anna-yaht-desktop_1280.webp    1x,
+                  ./img/our-yachts/Desktop_1280/belle-anna-yaht-desktop_1280@2x.webp 2x
+                "
+                media="(min-width: 1280px)"
+                type="image/webp"
+              />
+              <!-- /WebP -->
+
               <source
                 srcset="
                   ./img/our-yachts/Desktop_1440/belle-anna-yaht-desktop_1440.jpg    1x,
@@ -332,10 +444,12 @@
                 "
                 media="(min-width: 1280px)"
               />
+
               <img
                 class="our-yachts-img"
                 src="./img/our-yachts/Desktop_1280/belle-anna-yaht-desktop_1280.jpg"
                 alt="belle anna yacht"
+                loading="lazy"
               />
             </picture>
 
@@ -409,14 +523,41 @@
             </li>
           </ol>
           <picture>
-            <!-- <source
-        srcset="
-          ./img/advantages/advantages-desktop-b.jpg    1x,
-          ./img/advantages/advantages-desktop-b@2x.jpg 2x
-        "
-        media="(min-width: 1440px)"
-        type="image/webp"
-      /> -->
+            <!-- WebP -->
+            <source
+              srcset="
+                ./img/advantages/advantages-desktop-b.webp    1x,
+                ./img/advantages/advantages-desktop-b@2x.webp 2x
+              "
+              media="(min-width: 1440px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./img/advantages/advantages-desktop.webp    1x,
+                ./img/advantages/advantages-desktop@2x.webp 2x
+              "
+              media="(min-width: 1280px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./img/advantages/advantages-tablet.webp    1x,
+                ./img/advantages/advantages-tablet@2x.webp 2x
+              "
+              media="(min-width: 768px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./img/advantages/advantages-phone.webp    1x,
+                ./img/advantages/advantages-phone@2x.webp 2x
+              "
+              media="(max-width: 767px)"
+              type="image/webp"
+            />
+            <!-- /WebP -->
+
             <source
               srcset="
                 ./img/advantages/advantages-desktop-b.jpg    1x,
@@ -445,10 +586,12 @@
               "
               media="(max-width: 767px)"
             />
+
             <img
               class="advantages-pic"
               src="./img/advantages/advantages-phone.jpg"
               alt="a big yacht"
+              loading="lazy"
             />
           </picture>
         </div>
@@ -507,6 +650,41 @@
             </div>
 
             <picture>
+              <!-- WebP -->
+              <source
+                srcset="
+                  ./img/rent-yacht/rent-yacht-desktop-1440.webp    1x,
+                  ./img/rent-yacht/rent-yacht-desktop-1440@2x.webp 2x
+                "
+                media="(min-width: 1440px)"
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./img/rent-yacht/rent-yacht-desktop.webp    1x,
+                  ./img/rent-yacht/rent-yacht-desktop@2x.webp 2x
+                "
+                media="(min-width: 1280px)"
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./img/rent-yacht/rent-yacht-tablet.webp    1x,
+                  ./img/rent-yacht/rent-yacht-tablet@2x.webp 2x
+                "
+                media="(min-width: 768px)"
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./img/rent-yacht/rent-yacht-mobile.webp    1x,
+                  ./img/rent-yacht/rent-yacht-mobile@2x.webp 2x
+                "
+                media="(max-width: 767px)"
+                type="image/webp"
+              />
+              <!-- /WebP -->
+
               <source
                 srcset="
                   ./img/rent-yacht/rent-yacht-desktop-1440.jpg    1x,
@@ -535,6 +713,7 @@
                 "
                 media="(max-width: 767px)"
               />
+
               <img
                 class="section-rent-yacht-image"
                 src="./img/rent-yacht/rent-yacht-mobile.jpg"
@@ -561,9 +740,20 @@
         <ul class="reviews-list list">
           <li class="reviews-card">
             <picture>
+              <!-- WebP -->
+              <source
+                srcset="
+                  ./img/reviews/john.webp    1x,
+                  ./img/reviews/john@2x.webp 2x
+                "
+                type="image/webp"
+              />
+              <!-- /WebP -->
+
               <source
                 srcset="./img/reviews/john.jpg 1x, ./img/reviews/john@2x.jpg 2x"
               />
+
               <img
                 class="reviews-img"
                 src="./img/reviews/john.jpg"
@@ -582,12 +772,23 @@
           </li>
           <li class="reviews-card current">
             <picture>
+              <!-- WebP -->
+              <source
+                srcset="
+                  ./img/reviews/victoria.webp    1x,
+                  ./img/reviews/victoria@2x.webp 2x
+                "
+                type="image/webp"
+              />
+              <!-- /WebP -->
+
               <source
                 srcset="
                   ./img/reviews/victoria.jpg    1x,
                   ./img/reviews/victoria@2x.jpg 2x
                 "
               />
+
               <img
                 class="reviews-img"
                 src="./img/reviews/victoria.jpg"
@@ -609,9 +810,20 @@
           </li>
           <li class="reviews-card invisible">
             <picture>
+              <!-- WebP -->
+              <source
+                srcset="
+                  ./img/reviews/ihor.webp    1x,
+                  ./img/reviews/ihor@2x.webp 2x
+                "
+                type="image/webp"
+              />
+              <!-- /WebP -->
+
               <source
                 srcset="./img/reviews/ihor.jpg 1x, ./img/reviews/ihor@2x.jpg 2x"
               />
+
               <img
                 class="reviews-img"
                 src="./img/reviews/ihor.jpg"

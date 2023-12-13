@@ -652,8 +652,7 @@ button {
     max-width: 336px;
   }
   .yachts-two {
-    display: flex;
-    flex-direction: column;
+    display: block;
   }
   .our-yachts-name {
     font-size: 16px;
@@ -677,8 +676,7 @@ button {
     max-width: 377px;
   }
   .yachts-three {
-    display: flex;
-    flex-direction: column;
+    display: block;
   }
   .our-yachts-name-plus {
     display: flex;
