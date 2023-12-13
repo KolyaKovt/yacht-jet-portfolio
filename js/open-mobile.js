@@ -1,5 +1,6 @@
 (() => {
   const refs = {
+    pageHeader: document.querySelector("#page-header"),
     toggleMenuBtn: document.querySelector("#toggle-mobile-menu-btn"),
     menu: document.querySelector("#mobile-menu-container"),
     navLinks: document.querySelectorAll(".page-nav-link"),
@@ -19,6 +20,7 @@
   }
 
   function toggleMenu() {
+    refs.pageHeader.classList.toggle("fixed");
     refs.menu.classList.toggle("is-hidden");
     refs.closeMenuSvg.classList.toggle("is-hidden");
     refs.openMenuSvg.classList.toggle("is-hidden");
